@@ -1,0 +1,84 @@
+.contenido{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* asi usa solo lo que requiere y no se alarga hasta el final de la lista de guitarras */
+    align-items: flex-start;
+    gap: 5rem;
+}
+@media (min-width: 768px) { 
+     .contenido{
+        grid-template-columns: 3fr 2fr;
+     }
+}
+
+.resumen{
+    background-color: #f9faf1;
+    padding: 3rem;
+    border-radius: 1rem;
+    /*ambas para dejarlo como fijo cuando la lista de guitarras es larga */
+    position: sticky;
+    top: 3rem;
+}
+
+.producto{
+    display: grid ;
+    grid-template-columns: 1fr 3fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 3rem 0;
+    border-bottom: 1px solid #cfcfcf;
+    position: relative;
+}
+.producto:last-of-type{
+    border-bottom: none;
+}
+.producto p{
+    margin: 1rem 0;
+}
+.producto span{
+    font-weight: 900;
+    font-size: 2.6;
+}
+.nombre{
+    font-weight: 700;
+    font-size: 3.2rem;
+}
+.precio{
+    font-weight: 700;
+    font-size: 2.2;
+    color: var(--primary);
+}
+.subtotal{
+    font-size: 2.2rem;
+}
+.select{
+    border: 1px solid #cfcfcf ;
+    text-align: center;
+    padding: .5rem;
+    border-radius: .5rem;
+    width: 50%;
+    margin-left: 2rem;
+}
+.btnEliminar{
+    all: unset;
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.btnEliminar:hover{
+    transform: scale(1.05);
+}
+.aEliminar{
+    all: unset;
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+    width: 3rem;
+}
+.aEliminar:hover{
+    transform: scale(1.1);
+}

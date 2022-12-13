@@ -1,0 +1,64 @@
+.blog{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+}
+@media (min-width: 768px) { 
+     .blog{
+        grid-template-columns: repeat(2,1fr);
+     }
+}
+@media (min-width: 992px) { 
+    .blog{
+       grid-template-columns: repeat(3,1fr);
+    }
+}
+.post{
+    max-width: 80rem;
+}
+.post .contenido{
+    padding: 2rem .5rem;
+}
+@media (min-width: 768px) { 
+    .post .contenido{
+        padding: 1.5rem;
+    }
+}
+.post .contenido h3{
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin: 0;
+}
+.post .fecha{
+    font-size: 1.8rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+.post .resumen{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+.post img{
+    display: block;
+    width: 100%;
+}
+
+/***** para vista de un post **/
+
+.texto{
+    white-space: pre-wrap;
+}
+.mt-3{
+    margin-top: 3rem;
+}
+.blog-back{
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.blog-contenido{
+    margin: 0 auto;
+}
